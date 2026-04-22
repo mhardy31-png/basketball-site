@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basketball Stars</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .container { text-align: center; }
+        .game { width: 600px; height: 400px; margin: 0 auto; }
+        .score { font-size: 2em; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Basketball Stars Game</h1>
+        <div class="score">Score: <span id="score">0</span></div>
+        <div class="game">
+            <canvas id="gameCanvas"></canvas>
+        </div>
+        <button id="startBtn">Start Game</button>
+    </div>
+    <script>
+        const canvas = document.getElementById('gameCanvas');
+        const ctx = canvas.getContext('2d');
+        canvas.width = 600;
+        canvas.height = 400;
+        let score = 0;
+        document.getElementById('startBtn').addEventListener('click', startGame);
+
+        function startGame() {
+            score = 0;
+            document.getElementById('score').innerText = score;
+            // Game logic here... 
+        }
+
+        // Additional game functions...
+    </script>
+</body>
+</html>
